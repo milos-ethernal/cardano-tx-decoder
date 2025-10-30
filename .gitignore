@@ -1,0 +1,30 @@
+# Node / Vite
+node_modules/
+dist/
+.vite/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Do NOT ignore docs/ because GitHub Pages serves from there
+# docs/
+
+# Go binaries
+tx-helper
+*.exe
+*.out
+
+# Env files
+.env
+.env.*
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+
