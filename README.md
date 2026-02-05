@@ -1,6 +1,6 @@
 ## Cardano Transaction Decoder
 
-Live demo: [milos-ethernal.github.io/cardano-tx-decoder](https://milos-ethernal.github.io/cardano-tx-decoder/)
+Live demo: [Cardano TX decoder (CBOR) online](https://milos-ethernal.github.io/cardano-tx-decoder/)
 
 Simple, fast Cardano transaction decoding in two modes:
 - **Browser-only (recommended):** React + WASM using `@emurgo/cardano-serialization-lib-browser`, no backend needed.

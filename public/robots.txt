@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://milos-ethernal.github.io/cardano-tx-decoder/sitemap.xml
+

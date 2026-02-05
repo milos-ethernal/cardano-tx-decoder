@@ -435,6 +435,19 @@ export default function App() {
           <pre>{error}</pre>
         </div>
       )}
+      <section className="seo-copy" style={{ marginTop: '1rem' }}>
+        <h2>Free Cardano TX Decoder (CBOR)</h2>
+        <p>
+          Decode Cardano transactions directly in your browser. This Cardano TX decoder parses CBOR and shows
+          inputs, outputs, multi-asset mint/burn, metadata, collateral inputs, reference inputs, required signers,
+          validity range, withdrawals and more.
+        </p>
+        <h3 style={{ marginTop: '0.75rem' }}>FAQ</h3>
+        <p><strong>Is it safe?</strong> Yes. Decoding happens locally in your browser using WebAssembly.</p>
+        <p><strong>What formats are supported?</strong> Paste raw CBOR hex or JSON containing a <code>cborHex</code> field.</p>
+        <p><strong>Which fields are decoded?</strong> We display a JSON similar to <code>cardano-cli transaction view</code>,
+        including mint, metadata, collateral, and reference inputs when present.</p>
+      </section>
     </div>
   );
 }
