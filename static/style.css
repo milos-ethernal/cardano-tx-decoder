@@ -105,10 +105,40 @@ button:active {
     margin-bottom: 20px;
 }
 
+.result-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
 .result-container h3 {
     color: #28a745;
-    margin-bottom: 15px;
+    margin: 0;
     font-size: 1.3rem;
+}
+
+.copy-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: #e9ecef;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.copy-btn:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
 }
 
 .error-container h3 {
