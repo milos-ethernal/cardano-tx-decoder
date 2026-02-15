@@ -16,6 +16,44 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+}
+
+.header-corner {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.star-btn,
+.repo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.star-btn:hover,
+.repo-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: white;
+}
+
+/* GitHub Issue button (script replaces anchor with iframe) */
+.header-corner .github-button,
+.header-corner iframe {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* Header styles */
@@ -161,9 +199,38 @@ pre {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     .container {
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header {
+        order: 1;
+        margin-bottom: 0;
+    }
+    
+    .header-corner {
+        position: static;
+        order: 2;
+        margin-top: 8px;
+        margin-bottom: 24px;
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    .form-container,
+    .result-container,
+    .error-container,
+    .seo-copy {
+        order: 3;
+    }
+    
+    .star-btn,
+    .repo-link {
+        padding: 6px 10px;
+        font-size: 0.8rem;
     }
     
     header h1 {

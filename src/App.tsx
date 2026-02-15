@@ -409,8 +409,43 @@ export default function App() {
     }
   };
 
+  const repoUrl = 'https://github.com/milos-ethernal/cardano-tx-decoder';
+  const repoIssuesUrl = 'https://github.com/milos-ethernal/cardano-tx-decoder/issues';
+
+  // Load GitHub buttons script after mount so it finds our .github-button anchors
+  useEffect(() => {
+    if (document.querySelector('script[src="https://buttons.github.io/buttons.js"]')) return;
+    const script = document.createElement('script');
+    script.src = 'https://buttons.github.io/buttons.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <div className="container">
+      <div className="header-corner">
+        <a
+          className="github-button"
+          href={repoUrl}
+          data-color-scheme="no-preference: light; light: light; dark: dark;"
+          data-icon="octicon-star"
+          data-size="large"
+          aria-label="Star milos-ethernal/cardano-tx-decoder on GitHub"
+        >
+          Star
+        </a>
+        <a
+          className="github-button"
+          href={repoIssuesUrl}
+          data-color-scheme="no-preference: light; light: light; dark: dark;"
+          data-icon="octicon-issue-opened"
+          data-size="large"
+          aria-label="Issue milos-ethernal/cardano-tx-decoder on GitHub"
+        >
+          Issue
+        </a>
+      </div>
       <header>
         <h1>Cardano Transaction Decoder</h1>
         <p>Paste your CBOR hex string to decode the transaction (runs fully in your browser)</p>
